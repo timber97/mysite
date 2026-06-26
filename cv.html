@@ -102,11 +102,51 @@
   }
   .entry p{ margin:0.3rem 0 0; }
 
+  .entry ul{
+    list-style:none;
+    margin:0.5rem 0 0;
+    padding:0;
+  }
+  .entry li{
+    position:relative;
+    padding:0.25rem 0 0.25rem 1.4rem;
+    font-size:0.95em;
+  }
+  .entry li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0.85em;
+    width:0.36rem;
+    height:0.36rem;
+    background:var(--ink);
+  }
+
   .entry a{
     border-bottom:1px solid var(--line);
     transition:border-color .15s, color .15s;
   }
   .entry a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  .extras{
+    list-style:none;
+    margin:0.5rem 0 0;
+    padding:0;
+  }
+  .extras li{
+    position:relative;
+    padding:0.25rem 0 0.25rem 1.4rem;
+    font-size:0.95em;
+  }
+  .extras li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0.85em;
+    width:0.36rem;
+    height:0.36rem;
+    background:var(--ink);
+  }
 
   .foot{
     font-family:var(--sans);
@@ -152,18 +192,51 @@
     <div class="entry">
       <p class="entry-title">Director, <a href="https://protocol-institute.org/">Protocol Institute</a></p>
       <p class="entry-meta">2023 &ndash; Present</p>
+      <p>The Protocol Institute grew out of the Summer of Protocols research program. I joined in 2023 as a researcher studying <a href="https://drive.google.com/file/d/1-H9CCj3q6mUiwkMbueEoUyIMTqlmiA91/view?usp=drive_link">occupational health and safety protocols</a>, then was asked to help run the program itself. Over the next two years I was promoted four times&mdash;from researcher to project coordinator to managing director of the entire institute.</p>
+      <ul>
+        <li>Managed operations, publishing, community relations and projects for two years with a ~$1M annual budget.</li>
+        <li>Wrote strategies, research essays, internal documentation and requests for proposals.</li>
+        <li>Pivoted newsletter into a hybrid sci-fi and industry magazine and grew readership by 500% over 18 months.</li>
+        <li>Acted as the primary point of contact for over 70 program alumni and hundreds of community members.</li>
+        <li>Represented PI at events globally, including technology conferences in Bangkok and Buenos Aires, working groups at the Santa Fe Institute, multiple podcasts, and collaborations with institutional partners.</li>
+      </ul>
     </div>
 
-    <!-- Add more experience entries here -->
+    <div class="entry">
+      <p class="entry-title">Analyst, Yukon Government</p>
+      <p class="entry-meta">2020 &ndash; 2023</p>
+      <p>Worked in the Department of Highways and Public Works as a key member of a government-wide internal consulting unit, supporting strategic projects and organizational change across multiple departments.</p>
+      <ul>
+        <li>Led design of an organization-wide occupational health and safety management system and managed the project&rsquo;s $2.5M budget.</li>
+        <li>Assisted with the reorganization of a 100-person division by conducting interviews and researching business functions.</li>
+        <li>Prepared briefing notes for ministers on extremely short notice; topics ranged from procurement policies to emerging technology.</li>
+        <li>Designed and facilitated strategic planning exercises for executive teams across the organization.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <p class="entry-title">Analyst, Canadian Quantum Computing Industry</p>
+      <p class="entry-meta">2018 &ndash; 2020</p>
+      <p>Three interlinked roles across government and industry. I started as a policy analyst intern with the Government of British Columbia working on technology tax policy, which led to a position at 1QBit doing market research and operational improvement. BC then recruited me back as a project analyst to help launch the Quantum Algorithms Institute in Surrey&mdash;a $25M public-private partnership with SFU and a consortium of companies including 1QBit. I left in March 2020, after securing the funding transfer on an extraordinarily compressed timeline, just as COVID shut everything down.</p>
+      <ul>
+        <li>Reviewed and amended technology tax credit policies to bolster growth in BC&rsquo;s emerging tech industries.</li>
+        <li>Conducted market research at 1QBit in potential software verticals including logistics, organometallic catalyst design and drug development.</li>
+        <li>Facilitated a 32-person advisory board and four working groups, prepared positioning strategies, landscape analyses and budgets, and supported a high-profile, high-velocity partnership to launch QuAI.</li>
+      </ul>
+    </div>
 
     <p class="eyebrow">Education</p>
 
     <div class="entry">
-      <p class="entry-title">Degree &amp; Institution</p>
-      <p class="entry-meta">Year</p>
+      <p class="entry-title">Bachelor of Commerce, University of Victoria</p>
+      <p class="entry-meta">2015 &ndash; 2019</p>
+      <ul class="extras">
+        <li>Athletics Captain, Jeux de Commerce</li>
+        <li>Director, Commerce Students Society</li>
+        <li>Founder, UVic Business Technology Club</li>
+        <li>1st Place, UVic Alumni Chess Tournament</li>
+      </ul>
     </div>
-
-    <!-- Add more education entries here -->
 
     <nav class="foot">
       <a href="index.html">Home</a>
