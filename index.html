@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timber Stinson-Schroff</title>
+<meta name="description" content="Strategy, analysis and writing across government and tech. Director at the Protocol Institute. Based in Whitehorse, Yukon.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Timber Stinson-Schroff">
+<meta property="og:description" content="Strategy, analysis and writing across government and tech. Based in Whitehorse, Yukon.">
+<meta property="og:url" content="https://www.timberschroff.com/">
+<!-- Replace with your hosted image once added: -->
+<meta property="og:image" content="https://www.timberschroff.com/assets/header.jpg">
+
+<!-- Rook favicon, inline so it costs zero requests -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%99%96</text></svg>">
+
+<style>
+  :root{
+    --paper:#F5F6F4;
+    --ink:#17191C;
+    --muted:#6A6E73;
+    --line:#DCDDD8;
+    --accent:#9A2F2F;     /* "check" red — used sparingly */
+    --measure:60ch;
+    --serif: ui-serif, Georgia, "Times New Roman", serif;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:clamp(1.05rem, 0.95rem + 0.4vw, 1.2rem);
+    line-height:1.6;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  /* The "file" — a thin vertical rule the eye follows down the page,
+     echoing the rook's straight-line movement. */
+  .page{
+    max-width:46rem;
+    margin:0 auto;
+    padding:clamp(2.5rem, 6vw, 6rem) clamp(1.4rem, 5vw, 3rem) 3rem;
+    border-left:1px solid var(--line);
+  }
+
+  /* Hero */
+  .mark{
+    font-size:clamp(3.4rem, 9vw, 5.5rem);
+    line-height:1;
+    margin:0 0 1.4rem -0.08em;   /* optical hang of the glyph */
+    color:var(--ink);
+  }
+
+  .name{
+    font-size:clamp(1.7rem, 1.2rem + 2.4vw, 2.6rem);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    line-height:1.05;
+    margin:0;
+  }
+
+  .locus{
+    font-family:var(--sans);
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0.7rem 0 0;
+  }
+
+  .rule{
+    border:0;
+    border-top:1px solid var(--line);
+    margin:2.2rem 0;
+  }
+
+  .lede{
+    max-width:var(--measure);
+    margin:0;
+  }
+  .lede a{
+    border-bottom:1px solid var(--line);
+    transition:border-color .15s, color .15s;
+  }
+  .lede a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  /* Notes — an eyebrow + a quiet list */
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:2.6rem 0 1rem;
+  }
+
+  .notes{
+    list-style:none;
+    margin:0;
+    padding:0;
+    max-width:var(--measure);
+  }
+  .notes li{
+    position:relative;
+    padding:0.55rem 0 0.55rem 1.6rem;
+    border-top:1px solid var(--line);
+  }
+  .notes li:first-child{ border-top:0; }
+  /* rook-move marker: a small filled square (a "rank") */
+  .notes li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:1.05em;
+    width:0.42rem;
+    height:0.42rem;
+    background:var(--ink);
+  }
+  .notes a{
+    border-bottom:1px solid var(--line);
+    transition:border-color .15s, color .15s;
+  }
+  .notes a:hover{ color:var(--accent); border-color:var(--accent); }
+
+  /* Header figure */
+  figure{ margin:2.8rem 0 0; }
+  .header-img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:16 / 9;     /* reserves space → no layout shift */
+    object-fit:cover;
+    background:#e9eae6;        /* placeholder tone before the file loads */
+    border:1px solid var(--line);
+  }
+
+  /* Footer nav */
+  .foot{
+    font-family:var(--sans);
+    font-size:0.9rem;
+    letter-spacing:0.01em;
+    margin-top:2.8rem;
+    padding-top:1.4rem;
+    border-top:1px solid var(--line);
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.4rem 1.4rem;
+  }
+  .foot a{
+    color:var(--muted);
+    transition:color .15s;
+  }
+  .foot a:hover{ color:var(--accent); }
+
+  /* Focus + motion */
+  a:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+    border-radius:1px;
+  }
+
+  .reveal{ opacity:0; transform:translateY(8px); animation:rise .6s ease forwards; }
+  .reveal.d1{ animation-delay:.05s; }
+  .reveal.d2{ animation-delay:.12s; }
+  @keyframes rise{ to{ opacity:1; transform:none; } }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ animation:none; opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="mark reveal" aria-hidden="true">&#9814;</div>
+    <h1 class="name reveal d1">Timber Stinson-Schroff</h1>
+    <p class="locus reveal d2">Whitehorse &middot; Yukon &middot; 60.7&deg;&thinsp;N</p>
+
+    <hr class="rule">
+
+    <p class="lede">
+      I have seven years of experience on strategic teams in government and tech.
+      My role typically includes a mix of project management, analysis and writing.
+      I work well across functions in an organization, bringing both technical
+      literacy and good taste in marketing. Currently, I&rsquo;m a Director at the
+      <a href="https://protocol-institute.org/">Protocol Institute</a>.
+    </p>
+
+    <p class="eyebrow">Some quick notes</p>
+    <ul class="notes">
+      <li>I write a blog, <a href="https://blundercheck.timberschroff.com/">Blundercheck</a>, about frameworks for reliability and performance.</li>
+      <li>I&rsquo;m working on a book about indirection.</li>
+      <li>I have a <a href="https://thebrowser.com/free/systems-thinking-and-secret-police/">bad reputation</a> among systems thinkers.</li>
+      <li>I know a lot about <a href="https://drive.google.com/file/d/1-H9CCj3q6mUiwkMbueEoUyIMTqlmiA91/view?usp=drive_link">occupational health and safety</a>.</li>
+      <li>I&rsquo;m fluent in French.</li>
+      <li>I&rsquo;ve been to <a href="https://en.wikipedia.org/wiki/Foo_Camp">Foo Camp</a>.</li>
+    </ul>
+
+    <figure>
+      <!-- Drop your optimized image at assets/header.jpg (see notes from Claude).
+           width/height keep the reserved box honest for the browser. -->
+      <img class="header-img" src="assets/header.jpg" alt=""
+           width="1280" height="720" loading="lazy" decoding="async">
+    </figure>
+
+    <nav class="foot">
+      <a href="/cv">CV</a>
+      <a href="https://www.linkedin.com/in/t-schroff/">LinkedIn</a>
+      <a href="mailto:you@timberschroff.com">Email</a>
+      <a href="https://blundercheck.timberschroff.com/">Substack</a>
+    </nav>
+  </main>
+</body>
+</html>
