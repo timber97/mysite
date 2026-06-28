@@ -16,7 +16,7 @@
     --line:#DCDDD8;
     --accent:#9A2F2F;
     --measure:60ch;
-    --pad-left:clamp(1.4rem, 5vw, 3rem);
+    --pad-left:clamp(1.4rem, 5vw, 9rem);
     --serif: ui-serif, Georgia, "Times New Roman", serif;
     --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
@@ -54,12 +54,29 @@
   }
   .back:hover{ color:var(--accent); border-color:var(--accent); }
 
+  .headshot{
+    width:6rem;
+    height:6rem;
+    border-radius:0.5rem;
+    object-fit:cover;
+    object-position:center 30%;
+    border:1px solid var(--line);
+    margin:1.6rem 0 0.6rem;
+    display:block;
+  }
+
   h1{
     font-size:clamp(1.4rem, 1rem + 1.8vw, 2rem);
     font-weight:600;
     letter-spacing:-0.01em;
     line-height:1.15;
-    margin:1.6rem 0 0.3rem;
+    margin:0 0 0.3rem;
+  }
+
+  .section-divider{
+    border:0;
+    border-top:1px solid var(--line);
+    margin:2.4rem 0 0.4rem;
   }
 
   .rule{
@@ -78,22 +95,25 @@
   }
 
   .entry{ position:relative; margin:0 0 1.6rem; max-width:var(--measure); }
-  .entry::before{
-    content:"";
-    position:absolute;
-    left:calc(-1 * var(--pad-left) - 0.22rem);
-    top:0.35rem;
-    width:0.44rem;
-    height:0.44rem;
-    background:var(--ink);
-  }
   .entry-title{ font-weight:600; margin:0; }
   .entry-meta{
+    position:absolute;
+    left:calc(-1 * var(--pad-left) + 0.6rem);
+    top:0.05rem;
     font-family:var(--sans);
-    font-size:0.82rem;
+    font-size:0.72rem;
     font-weight:600;
     color:var(--muted);
-    margin:0.15rem 0 0.3rem;
+    margin:0;
+    white-space:nowrap;
+  }
+
+  @media (max-width:40rem){
+    .entry-meta{
+      position:static;
+      margin:0.15rem 0 0.3rem;
+      white-space:normal;
+    }
   }
   .entry p{ margin:0.3rem 0 0; font-size:0.85em; }
   .entry-title{ font-size:1em; }
@@ -170,7 +190,7 @@
   @media print{
     body{ font-size:11pt; }
     .page{ border:0; padding:0; }
-    .entry::before{ display:none; }
+    .entry-meta{ position:static; margin:0.15rem 0 0.3rem; white-space:normal; }
     .back, .foot{ display:none; }
   }
 </style>
@@ -178,6 +198,7 @@
 <body>
   <main class="page">
     <a class="back" href="index.html">&larr; Home</a>
+    <img class="headshot" src="assets/headshot_sm.jpg" alt="Timber Stinson-Schroff" width="400" height="533">
     <h1>Timber Stinson-Schroff</h1>
 
     <hr class="rule">
@@ -220,6 +241,7 @@
       </ul>
     </div>
 
+    <hr class="section-divider">
     <p class="eyebrow">Education</p>
 
     <div class="entry">
