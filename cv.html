@@ -54,15 +54,20 @@
   }
   .back:hover{ color:var(--accent); border-color:var(--accent); }
 
+  .cv-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1.2rem;
+    margin:1.6rem 0 0;
+  }
+
   .headshot{
-    width:6rem;
-    height:6rem;
+    width:5.5rem;
+    height:auto;
     border-radius:0.5rem;
-    object-fit:cover;
-    object-position:center 30%;
     border:1px solid var(--line);
-    margin:1.6rem 0 0.6rem;
-    display:block;
+    flex-shrink:0;
   }
 
   h1{
@@ -70,7 +75,7 @@
     font-weight:600;
     letter-spacing:-0.01em;
     line-height:1.15;
-    margin:0 0 0.3rem;
+    margin:0;
   }
 
   .section-divider{
@@ -198,8 +203,10 @@
 <body>
   <main class="page">
     <a class="back" href="index.html">&larr; Home</a>
-    <img class="headshot" src="assets/headshot_sm.jpg" alt="Timber Stinson-Schroff" width="400" height="533">
-    <h1>Timber Stinson-Schroff</h1>
+    <div class="cv-header">
+      <h1>Timber Stinson-Schroff</h1>
+      <img class="headshot" src="assets/headshot_sm.jpg" alt="Timber Stinson-Schroff" width="400" height="533">
+    </div>
 
     <hr class="rule">
 

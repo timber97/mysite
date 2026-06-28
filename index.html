@@ -158,9 +158,12 @@
   }
   .foot a{
     color:var(--muted);
-    transition:color .15s;
+    border:1px solid var(--line);
+    border-radius:0.3rem;
+    padding:0.2rem 0.65rem;
+    transition:color .15s, border-color .15s;
   }
-  .foot a:hover{ color:var(--accent); }
+  .foot a:hover{ color:var(--accent); border-color:var(--accent); }
 
   /* Focus + motion */
   a:focus-visible{
